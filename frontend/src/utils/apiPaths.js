@@ -1,8 +1,9 @@
 //export const BASE_URL = "http://localhost:8000";
-export const BASE_URL = "http://192.168.100.5:8000";
+//export const BASE_URL = "http://192.168.100.5:8000";
 //export const BASE_URL = "http://11.1.19.56:8000";
 //export const BASE_URL = "http://172.20.10.2:8000";
 //export const BASE_URL = "http://192.168.8.100:8000";
+export const BASE_URL = "https://teste-meu-bolso.onrender.com";
 
 // utils/apiPaths.js
 export const API_PATHS = {
