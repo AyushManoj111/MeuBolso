@@ -1,0 +1,67 @@
+/* ============================
+   Google Font Import
+   ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ============================
+   Tailwind CSS Directives
+   ============================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================
+   Global Base Styles
+   ============================ */
+@layer base {
+    html {
+        /* Define fonte padrão como Poppins para toda a aplicação */
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        /* Cor de fundo suave */
+        background-color: #fcfbfc;
+
+        /* Impede rolagem horizontal */
+        overflow-x: hidden;
+    }
+}
+
+/* ============================
+   Componentes Customizados
+   ============================ */
+
+/* Caixa de entrada de texto com layout flexível e visual limpo */
+.input-box {
+    @apply w-full flex justify-between gap-3 text-sm text-black bg-slate-100 rounded px-4 py-3 mb-4 mt-3 border border-slate-200 outline-none;
+}
+
+/* Botão principal roxo com hover estilizado e sombra */
+.btn-primary {
+    @apply w-full text-sm font-medium text-white bg-violet-500 shadow-lg shadow-purple-600/5 p-[10px] rounded-md my-1 hover:bg-purple-600/15 hover:text-purple-600;
+}
+
+/* Cartão com fundo branco, cantos arredondados e borda leve */
+.card {
+    @apply bg-white p-6 rounded-2xl shadow-md shadow-gray-100 border border-gray-200/50;
+}
+
+/* Botão pequeno em cartões com hover roxo e fundo claro */
+.card-btn {
+    @apply flex items-center gap-3 text-[12px] font-medium text-gray-700 hover:text-purple-500 bg-gray-50 hover:bg-purple-50 px-4 py-1.5 rounded-lg border border-gray-200/50 cursor-pointer;
+}
+
+/* Botão de adicionar com cores roxas e ajuste responsivo no texto */
+.add-btn {
+    @apply flex items-center gap-1.5 
+           text-xs              /* Tamanho base (mobile) */
+           md:text-sm          /* Aumenta a fonte em ecrãs médios (≥768px) */
+           font-medium text-purple-600 whitespace-nowrap 
+           bg-purple-50 border border-purple-100 rounded-lg px-4 py-2 cursor-pointer;
+}
+
+/* Variante preenchida do botão de adicionar (espera-se que 'bg-primary' esteja definido no Tailwind theme) */
+.add-btn-fill {
+    @apply text-white bg-primary;
+}
